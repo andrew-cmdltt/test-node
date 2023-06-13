@@ -7,12 +7,14 @@
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script
         src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
-    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 </head>
 
 <body>
     <h1>This is index.html</h1>
     <div id="map" class="map"></div>
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
     <script>
         var layers = [
             // new ol.layer.Tile({
@@ -37,6 +39,8 @@
                 zoom: 4
             })
         });
+
+        axios.get("http://84.201.154.126/api").then((res) => console.log(res))
     </script>
 </body>
 
